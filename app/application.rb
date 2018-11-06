@@ -5,8 +5,8 @@ class Application
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
-    new_item = Item.new
-    if req.path=="/items/#{new_item}"
+    n = Item.new
+    if req.path=="/items/#{n}"
       if @@items.include? new_item
         resp.write = "#{Item.price}"
       else
