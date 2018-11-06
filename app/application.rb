@@ -5,7 +5,7 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path=="/items/#{Item.name}"
-      resp.write =
+      resp.write = "#{Item.price}"
 
   end
 end
